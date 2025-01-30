@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>My Card</title>
+  </head>
+  
+  <body>
+    <div class="wrapper">
+      <div class="card">
+        <div class="front-page">
+          <div class="card-info">
+            <h2 class="card-title">Cristian Fernandes Martinez</h2>
+          </div>
+        </div>
+
+        <div class="back-page">
+          <div class="card-content">
+            <h3>Cristian Martinez</h3>
+            <p class="card-description">
+              Sou estudante de Ciências da Computação, apaixonado por
+              tecnologia, programação e inovação. Estou em constante aprendizado
+              para ampliar minhas habilidades e desenvolver soluções criativas e
+              eficientes no mundo da tecnologia. Meu foco está no
+              desenvolvimento de aplicações e sistemas que gerem impacto
+              positivo e atendam às necessidades dos usuários. Experiência com
+              linguagens como JavaScript.<br />
+              Desenvolvimento de aplicações como um conversor de moedas e um
+              jogo 2D jogável no navegador, utilizando ferramentas como VS Code
+              e frameworks modernos. Buscando sempre integrar boas práticas de
+              proteção aos meus projetos. Meu objetivo é crescer na área de
+              desenvolvimento de software, criar soluções inovadoras e
+              contribuir para projetos desafiadores. Estou à procura de
+              oportunidades que me permitam aplicar meus conhecimentos e
+              aprender ainda mais no mercado de trabalho.
+            </p>
+            <!-- Botão com redirecionamento -->
+            <button class="card-button" onclick="irParaInstagram()">
+              Visite meu Instagram
+            </button>
+
+            <script>
+              // Função para redirecionar ao Instagram em uma nova abaa
+              function irParaInstagram() {
+                window.open(
+                  "https://www.instagram.com/martinez_cfm?igsh=ZGY3OTJrbHE5YTI3",
+                  "_blank"
+                );
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
