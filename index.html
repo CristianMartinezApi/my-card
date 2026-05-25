@@ -50,7 +50,13 @@
                                 <div class="card-badge">Open to Work</div>
                                 <div class="card-image-placeholder">
                                     <div class="avatar-scanner"></div>
-                                    <img src="foto.jpg" alt="Cristian Martinez" onerror="this.src='https://ui-avatars.com/api/?name=Cristian+Martinez&background=00d2ff&color=fff&size=512'">
+                                    <div class="profile-icon-fallback">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                            <circle cx="12" cy="7" r="4"></circle>
+                                        </svg>
+                                    </div>
+                                    <img src="./perfil.png" alt="Cristian Martinez" class="profile-img">
                                 </div>
                                 <div class="card-footer">
                                     <h1>Cristian Martinez</h1>
@@ -58,8 +64,8 @@
                                 </div>
                             </div>
                             <div class="card-back">
-                                <h3>About <span class="highlight">Me</span></h3>
-                                <p>Explorando a intersecção entre <strong>design</strong> e <strong>tecnologia</strong> para criar interfaces que não apenas funcionam, mas encantam.</p>
+                                <h3>Professional <span class="highlight">Overview</span></h3>
+                                <p>Engenheiro Front-End focado em construir interfaces <strong>escaláveis</strong>, <strong>acessíveis</strong> e de <strong>alta performance</strong>.</p>
                                 
                                 <div class="about-stats">
                                     <div class="stat-item">
@@ -75,11 +81,11 @@
                                 <div class="about-info">
                                     <div class="info-row">
                                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                                        <span>Brasil / Global Remote</span>
+                                        <span>Palhoça, SC, Brasil • Disponível Remote</span>
                                     </div>
                                     <div class="info-row">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10v6M12 4v16"></path><rect x="2" y="10" width="20" height="6" rx="2"></rect></svg>
-                                        <span>Freelance / Full-time</span>
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                                        <span>Clean Code & Design Patterns</span>
                                     </div>
                                 </div>
 
@@ -105,44 +111,44 @@
 
         <section id="about-grid" class="about-grid-section">
             <div class="section-header">
-                <h2 class="section-title">Trajetória <span class="highlight">Acadêmica</span></h2>
-                <p class="section-subtitle">Construindo uma base sólida em Ciência da Computação.</p>
+                <h2 class="section-title">Engenharia & <span class="highlight">Estratégia</span></h2>
+                <p class="section-subtitle">Como eu transformo código em valor de negócio.</p>
             </div>
             
             <div class="about-bento">
                 <!-- Card Educação Principal -->
                 <div class="bento-item main-edu" data-tilt>
-                    <div class="bento-icon">🎓</div>
+                    <div class="bento-icon">🚀</div>
                     <div class="bento-content">
-                        <span class="bento-tag">Graduação</span>
-                        <h3>Bacharelado em Ciências da Computação</h3>
-                        <p class="edu-status">Estácio • Em andamento — Previsão 2028</p>
-                        <div class="edu-progress-bar"><div class="progress" style="width: 45%;"></div></div>
+                        <span class="bento-tag">Abordagem Técnica</span>
+                        <h3>Foco em Performance & Escalabilidade</h3>
+                        <p class="edu-status">Desenvolvimento de Single Page Applications (SPAs) otimizadas para Core Web Vitals e SEO avançado.</p>
+                        <div class="edu-progress-bar"><div class="progress" style="width: 85%;"></div></div>
                     </div>
                 </div>
 
-                <!-- Card Curso 1 -->
+                <!-- Card Especialidade 1 -->
                 <div class="bento-item course" data-tilt>
-                    <span class="course-date">Agosto 2025</span>
-                    <h3>Bancos de Dados SQL e NoSQL</h3>
-                    <p>Geek University • 52 horas</p>
-                    <div class="bento-tags-mini"><span>SQL</span><span>NoSQL</span></div>
+                    <span class="course-date">Design Imersivo</span>
+                    <h3>UI/UX para Engenheiros</h3>
+                    <p>Criação de micro-interações fluidas com GSAP e Framer Motion para retenção de usuários.</p>
+                    <div class="bento-tags-mini"><span>UX</span><span>GSAP</span></div>
                 </div>
 
-                <!-- Card Curso 2 -->
+                <!-- Card Especialidade 2 -->
                 <div class="bento-item course" data-tilt>
-                    <span class="course-date">Outubro 2025</span>
-                    <h3>Dev Web Completo</h3>
-                    <p>Ronaldo Rodrigues • 62,5 horas</p>
-                    <div class="bento-tags-mini"><span>Fullstack</span></div>
+                    <span class="course-date">Arquitetura</span>
+                    <h3>Modularidade & Reuso</h3>
+                    <p>Sólido conhecimento em Design Systems e Atomic Design para escala em grandes times.</p>
+                    <div class="bento-tags-mini"><span>Clean Code</span></div>
                 </div>
 
-                <!-- Card Curso 3 -->
+                <!-- Card Formação -->
                 <div class="bento-item course" data-tilt>
-                    <span class="course-date">Outubro 2025</span>
-                    <h3>60 HTML, CSS e JS Projects</h3>
-                    <p>Dr. Sahand Ghavidel • 53 horas</p>
-                    <div class="bento-tags-mini"><span>Vanilla JS</span><span>DOM</span></div>
+                    <span class="course-date">Acadêmico</span>
+                    <h3>Ciência da Computação</h3>
+                    <p>Bacharelado (Estácio) — Sólida base analítica e resolução de algoritmos complexos.</p>
+                    <div class="bento-tags-mini"><span>CS</span></div>
                 </div>
             </div>
         </section>
@@ -161,6 +167,7 @@
                         <h3>React.js</h3>
                         <span>Componentização</span>
                     </div>
+                    <div class="skill-description">Biblioteca focada em interfaces baseadas em componentes e estado reativo.</div>
                 </div>
                 <div class="skill-item" data-tilt style="--tech-color: #3178C6; --i: 2;">
                     <div class="skill-icon">
@@ -170,6 +177,7 @@
                         <h3>TypeScript</h3>
                         <span>Tipagem Estática</span>
                     </div>
+                    <div class="skill-description">Superset de JS que adiciona tipagem estática, reduzindo bugs e aumentando a produtividade.</div>
                 </div>
                 <div class="skill-item" data-tilt style="--tech-color: #F7DF1E; --i: 3;">
                     <div class="skill-icon">
@@ -179,6 +187,7 @@
                         <h3>JavaScript</h3>
                         <span>Modern ES6+</span>
                     </div>
+                    <div class="skill-description">Linguagem base da web moderna, utilizada para lógica complexa e interatividade.</div>
                 </div>
                 <div class="skill-item" data-tilt style="--tech-color: #88CE02; --i: 4;">
                     <div class="skill-icon">
@@ -188,6 +197,7 @@
                         <h3>GSAP</h3>
                         <span>Motion Design</span>
                     </div>
+                    <div class="skill-description">O padrão ouro para animações profissionais e alta performance na web.</div>
                 </div>
                 <div class="skill-item" data-tilt style="--tech-color: #06B6D4; --i: 5;">
                     <div class="skill-icon">
@@ -197,6 +207,7 @@
                         <h3>Tailwind</h3>
                         <span>Atomic CSS</span>
                     </div>
+                    <div class="skill-description">Framework CSS utilitário que permite estilização rápida e design consistente.</div>
                 </div>
                 <div class="skill-item" data-tilt style="--tech-color: #ffffff; --glass-border: rgba(255,255,255,0.2); --i: 6;">
                     <div class="skill-icon">
@@ -206,6 +217,7 @@
                         <h3>Next.js</h3>
                         <span>Fullstack Vercel</span>
                     </div>
+                    <div class="skill-description">Framework React para produção com SSR, SSG e rotas de API integradas.</div>
                 </div>
                 <div class="skill-item" data-tilt style="--tech-color: #BD34FE; --i: 7;">
                     <div class="skill-icon">
@@ -215,6 +227,7 @@
                         <h3>Vite</h3>
                         <span>Bundler Moderno</span>
                     </div>
+                    <div class="skill-description">Ferramenta de build extremamente veloz para o desenvolvimento front-end moderno.</div>
                 </div>
                 <div class="skill-item" data-tilt style="--tech-color: #F05032; --i: 8;">
                     <div class="skill-icon">
@@ -224,6 +237,7 @@
                         <h3>Git</h3>
                         <span>Versionamento</span>
                     </div>
+                    <div class="skill-description">Sistema essencial de controle de versão para colaboração e histórico de código.</div>
                 </div>
             </div>
         </section>
@@ -240,33 +254,70 @@
     </main>
 
     <footer class="footer">
+        <div class="footer-glow"></div>
         <div class="footer-content">
             <div class="footer-brand">
-                <h3>CM<span>.visual</span></h3>
-                <p>Criando o futuro da web através de interfaces imersivas e código de alta performance.</p>
+                <div class="footer-logo">CM<span>.visual</span></div>
+                <p>Engenharia de software com foco em experiências digitais de alto impacto e performance excepcional.</p>
+                <div class="footer-social-icons">
+                    <a href="https://github.com/CristianMartinezApi" target="_blank" class="social-icon-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/cristian-martinez-066703333/" target="_blank" class="social-icon-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    </a>
+                    <a href="mailto:fernandesribe04@gmail.com" class="social-icon-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    </a>
+                </div>
             </div>
-            <div class="footer-links">
-                <h4>Navegação</h4>
-                <ul>
-                    <li><a href="#hero">Início</a></li>
-                    <li><a href="#about-grid">Formação</a></li>
-                    <li><a href="#skills">Habilidades</a></li>
-                    <li><a href="#projects">Portfólio</a></li>
-                </ul>
+            <div class="footer-links-group">
+                <div class="footer-links">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="#hero">Início</a></li>
+                        <li><a href="#about-grid">Carreira</a></li>
+                        <li><a href="#skills">Habilidades</a></li>
+                        <li><a href="#projects">GitHub</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Serviços</h4>
+                    <ul>
+                        <li><a href="#">Desenvolvimento Frontend</a></li>
+                        <li><a href="#">Interfaces Reativas</a></li>
+                        <li><a href="#">Motion Design Web</a></li>
+                        <li><a href="#">Otimização Performance</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-links">
-                <h4>Social</h4>
-                <ul>
-                    <li><a href="https://github.com/CristianMartinezApi" target="_blank">GitHub</a></li>
-                    <li><a href="https://www.linkedin.com/in/cristian-martinez-066703333/" target="_blank">LinkedIn</a></li>
-                    <li><a href="mailto:fernandesribe04@gmail.com">Email</a></li>
-                </ul>
+            <div class="footer-contact">
+                <h4>Pronto para o próximo nível?</h4>
+                <p>Sinta-se à vontade para entrar em contato para projetos ou apenas para dizer oi.</p>
+                <div class="footer-cta-container">
+                    <button onclick="openContactOptions()" class="footer-cta" id="footer-main-btn">Vamos conversar!</button>
+                    <div class="contact-options" id="contact-menu">
+                        <a href="https://wa.me/5548998354402" target="_blank" class="contact-opt wa">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            WhatsApp
+                        </a>
+                        <button onclick="copyEmail()" class="contact-opt email">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            Copiar Email
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2026 Cristian Martinez. All rights reserved.</p>
-            <div class="social-links">
-                <span>Engenharia Front-End</span>
+            <div class="footer-copyright">
+                <p>© 2026 Cristian Martinez. Criado com paixão e performance.</p>
+            </div>
+            <div class="footer-back-top">
+                <a href="#hero" class="back-top-link">
+                    Voltar ao topo
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+                </a>
             </div>
         </div>
     </footer>
@@ -309,24 +360,79 @@
             const email = "fernandesribe04@gmail.com";
             navigator.clipboard.writeText(email).then(() => {
                 const btn = document.getElementById('email-btn');
+                const footerBtn = document.getElementById('footer-main-btn');
+                
                 const originalText = btn.innerText;
+                const originalFooterText = footerBtn ? footerBtn.innerText : "";
+
                 btn.innerText = "Copiado! ✓";
                 btn.style.background = "#22c55e";
+                
+                if (footerBtn) {
+                    footerBtn.innerText = "Email Copiado!";
+                    footerBtn.style.background = "#22c55e";
+                }
+
                 setTimeout(() => {
                     btn.innerText = originalText;
                     btn.style.background = "";
+                    if (footerBtn) {
+                        footerBtn.innerText = originalFooterText;
+                        footerBtn.style.background = "";
+                    }
+                    // Fecha o menu após copiar
+                    const menu = document.getElementById('contact-menu');
+                    if (menu) menu.classList.remove('show');
                 }, 2000);
             });
         }
 
+        window.openContactOptions = function() {
+            const menu = document.getElementById('contact-menu');
+            menu.classList.toggle('show');
+            
+            // Fecha o menu ao clicar fora
+            document.addEventListener('click', function closeMenu(e) {
+                if (!e.target.closest('.footer-cta-container')) {
+                    menu.classList.remove('show');
+                    document.removeEventListener('click', closeMenu);
+                }
+            });
+        }
+
         // Initialize Vanilla Tilt
-        VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
+        const mainCard = document.querySelector(".tilt-card-wrapper");
+        VanillaTilt.init(document.querySelectorAll("[data-tilt]:not(.tilt-card-wrapper)"), {
             max: 15,
             speed: 400,
             glare: true,
             "max-glare": 0.3,
             gyroscope: true
         });
+
+        // Controle da Rotação com GSAP (Ultra Fluido)
+        const cvCard = document.querySelector('.cv-card');
+        if (cvCard) {
+            let isFlipped = false;
+            
+            mainCard.addEventListener('mouseenter', () => {
+                gsap.to(cvCard, {
+                    rotateY: 180,
+                    duration: 0.8,
+                    ease: "power2.out",
+                    overwrite: true
+                });
+            });
+
+            mainCard.addEventListener('mouseleave', () => {
+                gsap.to(cvCard, {
+                    rotateY: 0,
+                    duration: 0.8,
+                    ease: "power2.out",
+                    overwrite: true
+                });
+            });
+        }
 
         // Spotlight effect para Skills
         document.querySelectorAll('.skill-item').forEach(item => {
@@ -448,10 +554,6 @@
                             <div class="p-header">
                                 <div class="p-icon">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
-                                </div>
-                                <div class="p-stars">
-                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                    ${repo.stargazers_count}
                                 </div>
                             </div>
                             <h3>${repo.name.replace(/-/g, ' ')}</h3>
