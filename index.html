@@ -445,10 +445,6 @@
             });
         });
 
-        // Entry Animations
-        gsap.set(".navbar", { clearProps: "all" });
-        gsap.from(".navbar", { y: -50, opacity: 0, duration: 1, ease: "power3.out" });
-        
         // Navbar scroll effect
         window.addEventListener('scroll', () => {
             const nav = document.querySelector('.navbar');
