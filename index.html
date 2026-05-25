@@ -11,7 +11,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Plus+Jakarta+Sans:wght@200;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="is-loading">    <!-- Noise Overlay -->
+    <div class="noise"></div>
+    <!-- Intro Loader -->
+    <div class="intro-loader">
+        <div class="loader-content">
+            <div class="loader-logo">CM<span>.visual</span></div>
+            <div class="loader-text-wrapper">
+                <div class="loader-text welcome">Olá! Sou Cristian Martinez</div>
+                <div class="loader-text bio">Engenheiro Front-End transformando<br><span>complexidade em simplicidade visual</span></div>
+            </div>
+            <div class="loader-bar"><div class="loader-progress"></div></div>
+        </div>
+    </div>
+
     <div class="scroll-progress"></div>
     <!-- Custom Cursor -->
     <div class="custom-cursor"></div>
@@ -27,15 +40,28 @@
 
     <header class="navbar">
         <div class="nav-content">
-            <div class="nav-logo" data-tilt data-tilt-scale="1.1">CM<span>.visual</span></div>
+            <div class="logo-wrapper">
+                <div class="nav-logo" data-tilt data-tilt-scale="1.1">CM<span>.visual</span></div>
+                <div class="nav-status">
+                    <div class="status-indicator">
+                        <span class="status-dot"></span>
+                        <span class="status-text">Available</span>
+                    </div>
+                    <div class="status-divider"></div>
+                    <div class="status-info">
+                        <span class="loc-text">Palhoça, BR</span>
+                        <span id="local-time" class="time-text">00:00:00</span>
+                    </div>
+                </div>
+            </div>
             <nav class="nav-links">
-                <a href="#hero" class="nav-link-item">Início</a>
-                <a href="#about-grid" class="nav-link-item">Carreira</a>
-                <a href="#skills" class="nav-link-item">Techs</a>
-                <a href="#projects" class="nav-link-item">Projetos</a>
+                <a href="#hero" class="nav-link-item magnetic">Início</a>
+                <a href="#about-grid" class="nav-link-item magnetic">Carreira</a>
+                <a href="#skills" class="nav-link-item magnetic">Techs</a>
+                <a href="#projects" class="nav-link-item magnetic">Projetos</a>
             </nav>
             <div class="nav-actions">
-                <button onclick="copyEmail()" class="nav-cta" id="email-btn">Email</button>
+                <button onclick="copyEmail()" class="nav-cta magnetic" id="email-btn">Email</button>
             </div>
         </div>
     </header>
@@ -111,8 +137,8 @@
 
         <section id="about-grid" class="about-grid-section">
             <div class="section-header">
+                <span class="section-watermark">Timeline</span>
                 <h2 class="section-title">Engenharia & <span class="highlight">Estratégia</span></h2>
-                <p class="section-subtitle">Como eu transformo código em valor de negócio.</p>
             </div>
             
             <div class="about-bento">
@@ -155,8 +181,8 @@
 
         <section id="skills" class="skills-section">
             <div class="section-header">
-                <h2 class="section-title">Tech <span class="highlight">Stack</span></h2>
-                <p class="section-subtitle">Ferramentas que utilizo para construir o futuro.</p>
+                <span class="section-watermark">Core Stacks</span>
+                <h2 class="section-title">Especialidades <span class="highlight">Técnicas</span></h2>
             </div>
             <div class="skills-grid">
                 <div class="skill-item" data-tilt style="--tech-color: #61DAFB; --i: 1;">
@@ -209,16 +235,6 @@
                     </div>
                     <div class="skill-description">Framework CSS utilitário que permite estilização rápida e design consistente.</div>
                 </div>
-                <div class="skill-item" data-tilt style="--tech-color: #ffffff; --glass-border: rgba(255,255,255,0.2); --i: 6;">
-                    <div class="skill-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="m16 8-8 8"></path><path d="m8 8 8 8"></path></svg>
-                    </div>
-                    <div class="skill-info">
-                        <h3>Next.js</h3>
-                        <span>Fullstack Vercel</span>
-                    </div>
-                    <div class="skill-description">Framework React para produção com SSR, SSG e rotas de API integradas.</div>
-                </div>
                 <div class="skill-item" data-tilt style="--tech-color: #BD34FE; --i: 7;">
                     <div class="skill-icon">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
@@ -229,21 +245,12 @@
                     </div>
                     <div class="skill-description">Ferramenta de build extremamente veloz para o desenvolvimento front-end moderno.</div>
                 </div>
-                <div class="skill-item" data-tilt style="--tech-color: #F05032; --i: 8;">
-                    <div class="skill-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M18 6c-1.12 0-2.3.48-3.15 1.34A4.8 4.8 0 0 0 13.5 10V6a2 2 0 1 0-4 0v12a2 2 0 1 0 4 0v-2c0-1.12.48-2.3 1.34-3.15.85-.85 2.03-1.35 3.16-1.35 2.48 0 4.5 2.02 4.5 4.5s-2.02 4.5-4.5 4.5c-1.12 0-2.3-.48-3.15-1.34A4.8 4.8 0 0 0 13.5 14v4a2 2 0 1 1-4 0V6a2 2 0 1 1 4 0v2c0 1.12-.48 2.3-1.34 3.15-.85.85-2.03 1.35-3.16 1.35-2.48 0-4.5-2.02-4.5-4.5S6.52 6 9 6c1.12 0 2.3.48 3.15 1.34.86.85 1.35 2.03 1.35 3.16v4"></path></svg>
-                    </div>
-                    <div class="skill-info">
-                        <h3>Git</h3>
-                        <span>Versionamento</span>
-                    </div>
-                    <div class="skill-description">Sistema essencial de controle de versão para colaboração e histórico de código.</div>
-                </div>
             </div>
         </section>
 
         <section id="projects" class="projects-section">
             <div class="section-header">
+                <span class="section-watermark">Code Hub</span>
                 <h2 class="section-title">GitHub Showcase</h2>
             </div>
             <div class="bento-grid" id="github-projects">
@@ -255,18 +262,19 @@
 
     <footer class="footer">
         <div class="footer-glow"></div>
+        <span class="section-watermark footer-watermark">Contato</span>
         <div class="footer-content">
             <div class="footer-brand">
                 <div class="footer-logo">CM<span>.visual</span></div>
                 <p>Engenharia de software com foco em experiências digitais de alto impacto e performance excepcional.</p>
                 <div class="footer-social-icons">
-                    <a href="https://github.com/CristianMartinezApi" target="_blank" class="social-icon-btn">
+                    <a href="https://github.com/CristianMartinezApi" target="_blank" class="social-icon-btn magnetic">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                     </a>
-                    <a href="https://www.linkedin.com/in/cristian-martinez-066703333/" target="_blank" class="social-icon-btn">
+                    <a href="https://www.linkedin.com/in/cristian-martinez-066703333/" target="_blank" class="social-icon-btn magnetic">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
                     </a>
-                    <a href="mailto:fernandesribe04@gmail.com" class="social-icon-btn">
+                    <a href="mailto:fernandesribe04@gmail.com" class="social-icon-btn magnetic">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                     </a>
                 </div>
@@ -313,16 +321,22 @@
             <div class="footer-copyright">
                 <p>© 2026 Cristian Martinez. Criado com paixão e performance.</p>
             </div>
-            <div class="footer-back-top">
-                <a href="#hero" class="back-top-link">
-                    Voltar ao topo
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
-                </a>
-            </div>
         </div>
     </footer>
 
+    <!-- Botão Voltar ao Topo Flutuante -->
+    <button class="back-to-top magnetic" id="backToTop">
+        <svg class="progress-circle" width="56" height="56" viewBox="0 0 100 100">
+            <circle class="progress-bg" cx="50" cy="50" r="45" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="5"></circle>
+            <circle class="progress-bar" cx="50" cy="50" r="45" fill="none" stroke="var(--primary)" stroke-width="5" stroke-dasharray="282.7" stroke-dashoffset="282.7"></circle>
+        </svg>
+        <div class="back-arrow">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+        </div>
+    </button>
+
     <!-- Scripts -->
+    <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
@@ -330,29 +344,117 @@
         // GSAP Animations
         gsap.registerPlugin(ScrollTrigger);
 
-        // Custom Cursor Logic
+        // Initialize Lenis (Smooth Scroll)
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            touchMultiplier: 2,
+            infinite: false,
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+
+        // Intro Loader Animation
+        window.addEventListener('load', () => {
+            const tl = gsap.timeline();
+            
+            // Setup inicial - oculta elementos para revelação posterior
+            gsap.set([".navbar", ".custom-cursor", ".custom-cursor-follower"], { y: -50, opacity: 0 });
+            gsap.set(".profile-area", { x: -50, opacity: 0 });
+            gsap.set(".hero-text > *", { y: 30, opacity: 0 });
+            gsap.set(".loader-logo", { display: "block" });
+
+            tl.to(".loader-logo", { opacity: 1, y: -10, duration: 0.8, ease: "power3.out" })
+              .to(".loader-progress", { width: "30%", duration: 0.8, ease: "power2.inOut" }, "-=0.5")
+              
+              .to(".loader-logo", { opacity: 0, y: -20, duration: 0.5, ease: "power3.in", delay: 0.5 })
+              
+              .to(".loader-text.welcome", { opacity: 1, y: -5, duration: 0.8, ease: "power3.out" })
+              .to(".loader-progress", { width: "60%", duration: 1, ease: "power2.inOut" }, "-=0.5")
+              
+              .to(".loader-text.welcome", { opacity: 0, y: -15, duration: 0.5, ease: "power3.in", delay: 0.5 })
+              
+              .to(".loader-text.bio", { opacity: 1, y: -5, duration: 0.8, ease: "power3.out" })
+              .to(".loader-progress", { width: "100%", duration: 1.2, ease: "power2.inOut" }, "-=0.5")
+              
+              .to(".intro-loader", { 
+                  yPercent: -100, 
+                  duration: 1.2, 
+                  ease: "expo.inOut",
+                  delay: 0.5,
+                  onComplete: () => {
+                      document.body.classList.remove('is-loading');
+                      const loader = document.querySelector('.intro-loader');
+                      if (loader) loader.style.display = 'none';
+                      
+                      // Re-sync ScrollTrigger
+                      ScrollTrigger.refresh();
+                      
+                      // Revelação Garantida dos Elementos
+                      gsap.set([".navbar", ".profile-area", ".hero-text > *", ".custom-cursor", ".custom-cursor-follower"], { visibility: "visible" });
+                      
+                      gsap.to(".navbar", { y: 0, opacity: 1, duration: 1.2, ease: "power4.out" });
+                      gsap.to([".custom-cursor", ".custom-cursor-follower"], { opacity: 1, duration: 1, delay: 0.5 });
+                      gsap.to(".profile-area", { x: 0, opacity: 1, duration: 1.5, ease: "power4.out", delay: 0.2 });
+                      gsap.to(".hero-text > *", { 
+                          y: 0, 
+                          opacity: 1, 
+                          duration: 1.2, 
+                          stagger: 0.1, 
+                          ease: "power4.out", 
+                          delay: 0.4 
+                      });
+                  }
+              });
+        });
+
+        // Local Time Clock
+        function updateTime() {
+            const timeEl = document.getElementById('local-time');
+            if (timeEl) {
+                const now = new Date();
+                const options = { timeZone: 'America/Sao_Paulo', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+                timeEl.textContent = now.toLocaleTimeString('pt-BR', options);
+            }
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+
+        // Mover blobs de fundo e Cursor Customizado
         const cursor = document.querySelector('.custom-cursor');
         const follower = document.querySelector('.custom-cursor-follower');
-        
-        if (window.innerWidth > 1024) { // Apenas para desktop
+
+        if (window.innerWidth > 1024) {
             document.addEventListener('mousemove', (e) => {
                 gsap.to(cursor, { x: e.clientX, y: e.clientY, duration: 0.1 });
                 gsap.to(follower, { x: e.clientX - 10, y: e.clientY - 10, duration: 0.3 });
+
+                gsap.to(".glow-blob", {
+                    x: (e.clientX - window.innerWidth / 2) * 0.05,
+                    y: (e.clientY - window.innerHeight / 2) * 0.05,
+                    duration: 2,
+                    ease: "power2.out"
+                });
             });
 
+            // Efeito de hover nos elementos interativos
             document.querySelectorAll('a, button, .skill-item, .project-card, .tilt-card-wrapper').forEach(el => {
                 el.addEventListener('mouseenter', () => {
                     gsap.to(cursor, { scale: 2, background: 'rgba(255,255,255,0.8)' });
                     gsap.to(follower, { scale: 1.5, opacity: 0.2 });
                 });
                 el.addEventListener('mouseleave', () => {
-                    gsap.to(cursor, { scale: 1, background: '#38bdf8' });
+                    gsap.to(cursor, { scale: 1, background: 'var(--primary)' });
                     gsap.to(follower, { scale: 1, opacity: 0.5 });
                 });
             });
         } else {
-            cursor.style.display = 'none';
-            follower.style.display = 'none';
+            if (cursor) cursor.style.display = 'none';
+            if (follower) follower.style.display = 'none';
         }
 
         // Funções de Interatividade
@@ -434,6 +536,65 @@
             });
         }
 
+        // Magnetic Buttons Logic
+        document.querySelectorAll('.magnetic').forEach(btn => {
+            btn.addEventListener('mousemove', (e) => {
+                const rect = btn.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+                gsap.to(btn, {
+                    x: x * 0.4,
+                    y: y * 0.4,
+                    duration: 0.3,
+                    ease: "power2.out"
+                });
+            });
+            btn.addEventListener('mouseleave', () => {
+                gsap.to(btn, {
+                    x: 0,
+                    y: 0,
+                    duration: 0.5,
+                    ease: "elastic.out(1, 0.3)"
+                });
+            });
+        });
+
+        // Floating Back to Top Logic
+        const backToTop = document.getElementById('backToTop');
+        const progressBar = document.querySelector('.progress-bar');
+        const dashArray = 282.7;
+
+        window.addEventListener('scroll', () => {
+            const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = (window.scrollY / totalHeight);
+            
+            // Show/Hide Button
+            if (window.scrollY > 400) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+
+            // Update Progress Circle
+            const offset = dashArray - (scrollPercent * dashArray);
+            progressBar.style.strokeDashoffset = offset;
+        });
+
+        backToTop.addEventListener('click', () => {
+            lenis.scrollTo('#hero', { 
+                duration: 1.5, 
+                easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)) 
+            });
+        });
+
+        // Scroll Indicator Click
+        const scrollInd = document.querySelector('.scroll-indicator');
+        if (scrollInd) {
+            scrollInd.addEventListener('click', () => {
+                lenis.scrollTo('#about-grid', { duration: 1.2 });
+            });
+        }
+
         // Spotlight effect para Skills
         document.querySelectorAll('.skill-item').forEach(item => {
             item.addEventListener('mousemove', (e) => {
@@ -495,50 +656,77 @@
             }
         });
 
-        gsap.from(".reveal-text", { y: 30, opacity: 0, duration: 1, ease: "power3.out", delay: 0.5 });
+        // Spotlight effect para Bento Items
+        document.querySelectorAll('.bento-item').forEach(item => {
+            item.addEventListener('mousemove', (e) => {
+                const rect = item.getBoundingClientRect();
+                const x = ((e.clientX - rect.left) / rect.width) * 100;
+                const y = ((e.clientY - rect.top) / rect.height) * 100;
+                item.style.setProperty('--bx', `${x}%`);
+                item.style.setProperty('--by', `${y}%`);
+            });
+        });
+
+        // Watermark Parallax Effect
+        document.addEventListener('mousemove', (e) => {
+            const x = (e.clientX - window.innerWidth / 2) * 0.02;
+            const y = (e.clientY - window.innerHeight / 2) * 0.02;
+            gsap.to(".section-watermark", {
+                x: x,
+                y: y,
+                duration: 2,
+                ease: "power2.out"
+            });
+        });
 
         // Reveal animations on scroll
-        gsap.utils.toArray('.section-header, .skill-item, .bento-item').forEach(el => {
+        gsap.utils.toArray('.section-header, .skill-item, .bento-item, .project-card').forEach(el => {
             gsap.from(el, {
                 scrollTrigger: {
                     trigger: el,
-                    start: "top 95%",
+                    start: "top 90%",
+                    toggleActions: "play none none reverse"
                 },
-                y: 20,
+                y: 50,
                 opacity: 0,
-                duration: 0.6,
-                ease: "power2.out"
+                scale: 0.95,
+                duration: 1,
+                ease: "expo.out"
             });
         });
 
         // GitHub API Integration
         const username = 'CristianMartinezApi';
+        
+        // Projetos de Backup (Caso a API do GitHub atinja o limite)
+        const FALLBACK_REPOS = [
+            {
+                name: 'Modern Cinema UI',
+                description: 'Interface imersiva para streaming de filmes com GSAP e React.',
+                language: 'JavaScript',
+                html_url: `https://github.com/${username}`
+            },
+            {
+                name: 'Financial Dashboard',
+                description: 'Dashboard analítico com visualização de dados complexos e performance otimizada.',
+                language: 'TypeScript',
+                html_url: `https://github.com/${username}`
+            },
+            {
+                name: 'Core System API',
+                description: 'Arquitetura de microserviços e padrões de design escaláveis.',
+                language: 'React',
+                html_url: `https://github.com/${username}`
+            }
+        ];
+
         async function fetchRepos() {
             const grid = document.getElementById('github-projects');
-            try {
-                // Debug log
-                console.log("Iniciando busca para:", username);
-                
-                const response = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=12`);
-                if (!response.ok) {
-                    console.error("Status da Resposta:", response.status);
-                    throw new Error('GitHub API Fail');
-                }
-                
-                const repos = await response.json();
-                console.log("Repositórios encontrados:", repos.length);
-                
+            if (!grid) return;
+
+            function renderRepos(reposList, isFallback = false) {
                 grid.innerHTML = '';
-                
-                const filteredRepos = repos.filter(r => !r.fork && r.name.toLowerCase() !== username.toLowerCase());
-                console.log("Filtrados (sem forks):", filteredRepos.length);
-                
-                if (filteredRepos.length === 0) {
-                    grid.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: var(--text-dim);">Nenhum repositório público encontrado.</p>';
-                    return;
-                }
-                
-                filteredRepos.forEach(repo => {
+                reposList.forEach(repo => {
                     const card = document.createElement('div');
                     card.className = 'project-card';
                     card.setAttribute('data-tilt', '');
@@ -549,15 +737,16 @@
                         <div class="p-content">
                             <div class="p-header">
                                 <div class="p-icon">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
                                 </div>
+                                ${isFallback ? '<span style="font-size: 0.6rem; opacity: 0.5; text-transform: uppercase; letter-spacing: 1px;">Destaque</span>' : ''}
                             </div>
                             <h3>${repo.name.replace(/-/g, ' ')}</h3>
-                            <p>${repo.description || 'Explorando novas fronteiras no desenvolvimento front-end com tecnologia de ponta.'}</p>
+                            <p>${repo.description || 'Desenvolvimento front-end escalável e de alta performance.'}</p>
                             <div class="p-tags">${tags}</div>
                             <div class="p-footer">
                                 <a href="${repo.html_url}" target="_blank" class="p-link">
-                                    Explorar Repo <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+                                    Ver Detalhes <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
                                 </a>
                             </div>
                         </div>
@@ -575,36 +764,25 @@
                     grid.appendChild(card);
                 });
 
-                // Re-inicializar Tilt para novos cards
-                if (window.VanillaTilt) {
-                    VanillaTilt.init(document.querySelectorAll(".project-card"), {
-                        max: 10,
-                        speed: 400,
-                        glare: true,
-                        "max-glare": 0.2
-                    });
-                }
+                // Inicializa Tilt
+                VanillaTilt.init(grid.querySelectorAll(".project-card"), { max: 10, speed: 400, glare: true, "max-glare": 0.2 });
+                
+                // Animação GSAP
+                gsap.from(".project-card", { y: 20, opacity: 0, stagger: 0.05, duration: 0.4, ease: "power2.out" });
+            }
 
-                // Animação dos cards carregados (mais rápida)
-                gsap.from(".project-card", {
-                    y: 20,
-                    opacity: 0,
-                    stagger: 0.05,
-                    duration: 0.4,
-                    ease: "power2.out",
-                    onComplete: () => {
-                        gsap.set(".project-card", { clearProps: "opacity, y" });
-                    }
-                });
+            try {
+                const response = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=12`);
+                if (!response.ok) throw new Error('API Limit');
+                
+                const repos = await response.json();
+                const filteredRepos = repos.filter(r => !r.fork && r.name.toLowerCase() !== username.toLowerCase());
+                
+                renderRepos(filteredRepos.length > 0 ? filteredRepos : FALLBACK_REPOS);
 
             } catch (error) {
-                console.error("Erro ao buscar repositórios:", error);
-                grid.innerHTML = `
-                    <div class="error-msg" style="padding: 2rem; text-align: center; background: rgba(255,0,0,0.05); border-radius: 12px; border: 1px solid rgba(255,0,0,0.1);">
-                        <p>Ops! Não conseguimos conectar ao GitHub agora.</p>
-                        <a href="https://github.com/${username}" target="_blank" class="p-link" style="justify-content: center; margin-top: 1rem;">Ver Perfil Manualmente →</a>
-                    </div>
-                `;
+                console.warn("GitHub API Limit atingido. Usando projetos de backup.");
+                renderRepos(FALLBACK_REPOS, true);
             }
         }
         fetchRepos();

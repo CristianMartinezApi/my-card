@@ -12,8 +12,9 @@
         "vite": "^5.0.0"
     },
     "dependencies": {
+        "@studio-freight/lenis": "^1.0.42",
         "gsap": "^3.12.2",
-        "vanilla-tilt": "^1.8.0",
-        "lucide-static": "^0.321.0"
+        "lucide-static": "^0.321.0",
+        "vanilla-tilt": "^1.8.0"
     }
 }
